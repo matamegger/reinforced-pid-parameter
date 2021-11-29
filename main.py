@@ -38,10 +38,13 @@ if __name__ == '__main__':
     else:
         model = A2C('MlpPolicy', env, verbose=1)
 
+    # Maybe train
     if training:
         model.learn(total_timesteps=25000)
         model.save(model_name)
 
+
+    # Present result
     obs = env.reset()
     action, _state = model.predict(obs, deterministic=True)
     print(action)
