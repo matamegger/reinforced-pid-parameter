@@ -27,7 +27,7 @@ The model in the project is trained with 150k `timesteps` mixed with a `step` an
 
 Python3 as well as [`pipenv`](https://pypi.org/project/pipenv/) must be installed. The remaining dependencies should be automatically handled with the `Pipfile`s.
 
-# Usage
+## Usage
 _The pre-trained model `PID-Parameter-Model` will always be loaded if it exists in the filepath._
 
 ```
