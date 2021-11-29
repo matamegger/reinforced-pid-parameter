@@ -47,9 +47,9 @@ if __name__ == '__main__':
     # Present result
     obs = env.reset()
     action, _state = model.predict(obs, deterministic=True)
-    print(action)
+    print(f"PID Parameters: {action}")
     obs, reward, done, info = env.step(action)
-    print(reward)
+    print("Inverse normalized squared error: {reward}")
     env.render()
     if done:
         obs = env.reset()
