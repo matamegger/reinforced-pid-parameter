@@ -1,10 +1,9 @@
 import math
-from typing import Callable
-
 import gym
+from gym import spaces
+from typing import Callable
 import matplotlib.pyplot as plt
 import numpy as np
-from gym import spaces
 
 from pidsmd.pidspringmassdampersystem import PidSpringMassDamperSystem
 
