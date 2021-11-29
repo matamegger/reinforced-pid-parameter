@@ -1,10 +1,8 @@
 import math
 import os.path
 import sys
-from typing import Callable
 
 from stable_baselines3 import A2C
-from stable_baselines3.common.vec_env import SubprocVecEnv
 
 from PidTunerEnv import PidTunerEnv
 
