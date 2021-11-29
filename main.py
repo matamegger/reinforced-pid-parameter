@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     # Setup
     env = PidTunerEnv(input_function=input_function)
-    if os.path.isfile("PID-Parameter-Model.zip"):
+    if os.path.isfile(f"{model_name}.zip"):
         model = A2C.load(model_name, env=env)
     else:
         model = A2C('MlpPolicy', env, verbose=1)
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     action, _state = model.predict(obs, deterministic=True)
     print(f"PID Parameters: {action}")
     obs, reward, done, info = env.step(action)
-    print("Inverse normalized squared error: {reward}")
+    print(f"Inverse normalized squared error: {reward}")
     env.render()
     if done:
         obs = env.reset()
